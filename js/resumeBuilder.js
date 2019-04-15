@@ -53,7 +53,7 @@ console.log(namifyzer(text));
 
 var skills = ["awesomeness", "programming", "teaching", "JS"];
 //$("#main").append(skills);
-$("#main").append(skills[0]);
+//$("#main").append(skills[0]);
 
 var sampleArray = [0, 0, 7];
 
@@ -122,3 +122,59 @@ function nameChanger(oldName) {
 
 // Did your code work? The line below will tell you!
 console.log(nameChanger(name));
+
+
+
+var contact = ["+6395201258","cjpesco@gmail.com"];
+var bio = {
+    "name":"CJ Pesco",
+    "role":"Web Developer",
+    "contacts": {
+        "mobile":"+63912581024",
+        "email": "cjpesco@gmail.com",
+        "github":"cjpesco",
+        "twitter":"@cjpesco",
+        "location":"Southern Leyte"
+    },
+    "biopic": "images/fry.jpg",
+    "welcomeMessage":"Welcome to my website",
+    "age":25,
+    "skills": skills
+};
+
+bio["city"] = "Maasin City";
+bio["favColor"] = "Blue";
+
+var work = {};
+var education = {};
+work.jobposition = "Back End Developer";
+work.employer = "Clarkline Studio";
+work.yearsInCompany = 12;
+work.location = "Maasin City";
+
+education["college"] = "STI College Ormoc";
+education["years"] = "2015 - 2016";
+education["city"] = "Ormoc City";
+
+$("#main").append(bio.name);
+$("#main").append(bio.role);
+$("#main").append(bio.contacts);
+$("#main").append(bio.city);
+$("#main").append(bio.biopic);
+$("#main").append(bio.welcomeMessage);
+$("#main").append(bio.age);
+$("#main").append(bio.skills);
+$("#main").append(bio.favColor);
+
+$("#main").append(work.jobposition);
+$("#main").append(work.employer);
+$("#main").append(work.yearsInCompany);
+$("#main").append(work.location);
+
+$("#main").append(education.college);
+$("#main").append(education.years);
+$("#main").append(education.schoolLocation);
+
+
+
+
