@@ -51,7 +51,6 @@ This is empty on purpose! Your code to build the resume will go here.
 // // Did your code work? The line below will tell you!
 // console.log(namifyzer(text));
 
-
 // //$("#main").append(skills);
 // //$("#main").append(skills[0]);
 
@@ -123,9 +122,6 @@ This is empty on purpose! Your code to build the resume will go here.
 // // Did your code work? The line below will tell you!
 // console.log(nameChanger(name));
 
-
-
-
 // $("#main").append(bio.name);
 // $("#main").append(bio.role);
 // $("#main").append(bio.contacts);
@@ -145,36 +141,64 @@ This is empty on purpose! Your code to build the resume will go here.
 // $("#main").append(education.years);
 // $("#main").append(education.schoolLocation);
 
-var skills = ["awesomeness", "programming", "teaching", "JS"];
-var contact = ["+6395201258","cjpesco@gmail.com"];
 var bio = {
-    "name":"CJ Pesco",
-    "role":"Web Developer",
-    "contacts": {
-        "mobile":"+63912581024",
-        "email": "cjpesco@gmail.com",
-        "github":"cjpesco",
-        "twitter":"@cjpesco",
-        "location":"Southern Leyte"
-    },
-    "biopic": "images/fry.jpg",
-    "welcomeMessage":"Welcome to my website",
-    "age":25,
-    "skills": skills
+  name: "CJ Pesco",
+  role: "Web Developer",
+  contacts: {
+    mobile: "+63912581024",
+    email: "cjpesco@gmail.com",
+    github: "cjpesco",
+    twitter: "@cjpesco",
+    location: "Southern Leyte"
+  },
+  biopic: "images/fry.jpg",
+  welcomeMessage: "Welcome to my website",
+  skills: ["awesomeness", "programming", "teaching", "JS"]
 };
 
-bio["city"] = "Maasin City";
-bio["favColor"] = "Blue";
+var work = {
+  employer: "Clarkline Studio",
+  title: "Back End Developer",
+  dates: "2020 - December 31, 2080",
+  description: "Build apis for websites Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue augue nisi, nec elementum tellus vehicula cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque maximus ex volutpat orci commodo, at egestas risus ultrices. Donec pulvinar tempus ipsum in imperdiet."
+};
 
-var work = {};
-var education = {};
-work.jobposition = "Back End Developer";
-work.employer = "Clarkline Studio";
-work.yearsInCompany = 12;
-work.location = "Maasin City";
+var education = {
 
-education["college"] = "STI College Ormoc";
-education["years"] = "2015 - 2016";
-education["city"] = "Ormoc City";
+    schools: [
+        {
+            name: "STI Maasin",
+            city: "Maasin City",
+            degree: "Diploma",
+            majors: "DIT",
+            dates: 2013,
+            url: "http:example.com"
 
+           
+        },
+        {
+            name: "STI College Ormoc",
+            city: "Ormoc City",
+            degree: "Undergraduate",
+            majors: "BSIT",
+            dates: 2015,
+            url: "http:example.com"
+        }
+    ],
+    onlineCourses:[
+        {
+            title: "Javascript Crash Course",
+            school: "Udacity",
+            dates: 2014, 
+            url: "http://udacity.com"
+        },
+        {
+            title: "Full Stack Web Developer",
+            school: "Udacity",
+            dates: 2015, 
+            url: "http://udacity.com"
+        }
+    ]
+
+};
 
