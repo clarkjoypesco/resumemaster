@@ -18,3 +18,7 @@ var newEmail = email.replace('udacity','gmail');
 
 console.log(newEmail);
 
+var funThoughts = awesomeThoughts.replace('Awesome', 'Fun');
+
+$("#main").append(funThoughts);
+
