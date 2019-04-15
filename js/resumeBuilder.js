@@ -9,16 +9,25 @@ This is empty on purpose! Your code to build the resume will go here.
 
 // console.log('Name: ' +firstName + '\nAge: '+ age);
 
-var awesomeThoughts =' I am clark and I am Awesome!';
-console.log(awesomeThoughts); 
+// var awesomeThoughts =' I am clark and I am Awesome!';
+// console.log(awesomeThoughts); 
 
-var email = 'cameron@udacity.com';
+// var email = 'cameron@udacity.com';
 
-var newEmail = email.replace('udacity','gmail');
+// var newEmail = email.replace('udacity','gmail');
 
-console.log(newEmail);
+// console.log(newEmail);
 
-var funThoughts = awesomeThoughts.replace('Awesome', 'Fun');
+// var funThoughts = awesomeThoughts.replace('Awesome', 'Fun');
 
-$("#main").append(funThoughts);
+// $("#main").append(funThoughts);
 
+var name = 'CJ Pesco';
+var role = 'Web Developer';
+
+
+var formattedName = HTMLheaderName.replace('%data%', name);
+var formattedRole = HTMLheaderRole.replace('%data%', role);
+
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
