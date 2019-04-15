@@ -22,11 +22,11 @@ This is empty on purpose! Your code to build the resume will go here.
 
 // $("#main").append(funThoughts);
 
-// var name = "CJ Pesco";
-// var role = "Web Developer";
+//var name = "CJ Pesco";
+//var role = "Web Developer";
 
-// var formattedName = HTMLheaderName.replace("%data%", name);
-// var formattedRole = HTMLheaderRole.replace("%data%", role);
+//var formattedName = HTMLheaderName.replace("%data%", name);
+//var formattedRole = HTMLheaderRole.replace("%data%", role);
 
 // $("#header").prepend(formattedRole);
 // $("#header").prepend(formattedName);
@@ -247,13 +247,10 @@ var bracketNotation0 = true;
 var dotNotation1 = true;
 var bracketNotation1 = true;
 
-
 // property-2
 var dotNotation2 = false;
 
 var bracketNotation2 = true;
-
-
 
 // property 3
 var dotNotation3 = false;
@@ -264,32 +261,38 @@ var dotNotation4 = false;
 
 var bracketNotation4 = true;
 
-
-
 // *space*property
 var dotNotation5 = true;
 
 var bracketNotation5 = true;
-
-
 
 // property()
 var dotNotation6 = false;
 
 var bracketNotation6 = true;
 
-
-
 // property[]
 var dotNotation7 = false;
 
 var bracketNotation7 = true;
 
-
-
-
 // 8property
 var dotNotation8 = false;
 //console.log(weirdObject.8property);
 var bracketNotation8 = true;
-console.log(weirdObject['8property']);
+console.log(weirdObject["8property"]);
+
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
+
+if (bio.skills.length > 0) {
+  $("#header").append(HTMLskillsStart);
+  index = 0;
+  while (index < bio.skills.length) {
+    var formattedSkill = HTMLskills.replace("%data%", bio.skills[index]);
+    $("#skills").append(formattedSkill);
+    index++;
+  }
+}
