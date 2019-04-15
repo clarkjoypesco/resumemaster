@@ -11,3 +11,10 @@ This is empty on purpose! Your code to build the resume will go here.
 
 var awesomeThoughts =' I am clark and I am Awesome!';
 console.log(awesomeThoughts); 
+
+var email = 'cameron@udacity.com';
+
+var newEmail = email.replace('udacity','gmail');
+
+console.log(newEmail);
+
