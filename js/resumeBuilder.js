@@ -57,4 +57,5 @@ console.log(namifyzer(text));
 
 
 var skills= ['awesomeness','programming','teaching','JS'];
-$("#main").append(skills);
+//$("#main").append(skills);
+$("#main").append(skills[0]);
