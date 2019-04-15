@@ -31,3 +31,25 @@ var formattedRole = HTMLheaderRole.replace('%data%', role);
 
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
+
+
+
+/*
+ * Programming Quiz: String Manipulation Quiz 1
+ *
+ * Using string methods, convert "adamify" to "Namify"
+ */
+
+var text = "adamify";
+
+var namifyzer = function(string) {
+  // Right now, the variable string === "adamify"
+  // Manipulate string to make it equal to "Namify"
+  // Your code goes here!
+  string = string.slice(-5)
+  string = 'N' + string
+  return string;
+};
+
+// Did your code work? The line below will tell you!
+console.log(namifyzer(text));
