@@ -170,7 +170,7 @@ var education = {
             name: "STI Maasin",
             city: "Maasin City",
             degree: "Diploma",
-            majors: "DIT",
+            majors: ["DIT"],
             dates: 2013,
             url: "http:example.com"
 
@@ -180,7 +180,7 @@ var education = {
             name: "STI College Ormoc",
             city: "Ormoc City",
             degree: "Undergraduate",
-            majors: "BSIT",
+            majors: ["BSIT"],
             dates: 2015,
             url: "http:example.com"
         }
