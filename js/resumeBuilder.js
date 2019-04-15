@@ -77,9 +77,7 @@ var sampleArray = [0,0,7];
 //     // Your code goes in here!
 //     var index = 0;
   
-//     while(index < _array.length){
-       
-        
+//     while(index < _array.length){        
 //         if (index == _array.length - 1){
 //             newArray[index] = _array[index] + 1;
 //         } else {
@@ -95,9 +93,11 @@ var sampleArray = [0,0,7];
 // };
 function incrementLastArrayElement(_array)  {
     var newArray = [];
+   
     newArray = _array.slice(0);
     var lastNumber = newArray.pop();
     newArray.push(lastNumber + 1);
+    console.log(newArray);
     return newArray;
 }
 
