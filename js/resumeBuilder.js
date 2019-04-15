@@ -53,3 +53,8 @@ var namifyzer = function(string) {
 
 // Did your code work? The line below will tell you!
 console.log(namifyzer(text));
+
+
+
+var skills= ['awesomeness','programming','teaching','JS'];
+$("#main").append(skills);
