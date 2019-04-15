@@ -224,8 +224,6 @@ var charEscape = function(_html) {
     // Your code goes here!
     newHTML = _html.replace(/</g, "&lt;");
     newHTML = newHTML.replace(/>/g, "&gt;");
-
-
     // Don't delete this line!
     return newHTML;
 };
