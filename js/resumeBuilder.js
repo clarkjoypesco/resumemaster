@@ -59,3 +59,40 @@ console.log(namifyzer(text));
 var skills= ['awesomeness','programming','teaching','JS'];
 //$("#main").append(skills);
 $("#main").append(skills[0]);
+
+
+
+var sampleArray = [0,0,7];
+
+var incrementLastArrayElement = function(_array) {
+    var newArray = [];
+    // Your code should make newArray equal to an array that has the same
+    // values as _array, but the last number has increased by one.
+    
+    // For example:
+    // _array = [1, 2, 3];
+    // turns into:
+    // newArray = [1, 2, 4];
+    
+    // Your code goes in here!
+    var index = 0;
+  
+    while(index < _array.length){
+       
+        
+        if (index == _array.length - 1){
+            newArray[index] = _array[index] + 1;
+        } else {
+            newArray[index] = _array[index]
+        }
+        index++
+    }
+
+    
+    
+    // Don't delete this line!
+    return newArray;
+};
+
+// Did your code work? The line below will tell you!
+console.log(incrementLastArrayElement(sampleArray));
