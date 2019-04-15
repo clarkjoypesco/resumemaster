@@ -22,40 +22,40 @@ This is empty on purpose! Your code to build the resume will go here.
 
 // $("#main").append(funThoughts);
 
-var name = "CJ Pesco";
-var role = "Web Developer";
+// var name = "CJ Pesco";
+// var role = "Web Developer";
 
-var formattedName = HTMLheaderName.replace("%data%", name);
-var formattedRole = HTMLheaderRole.replace("%data%", role);
+// var formattedName = HTMLheaderName.replace("%data%", name);
+// var formattedRole = HTMLheaderRole.replace("%data%", role);
 
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
+// $("#header").prepend(formattedRole);
+// $("#header").prepend(formattedName);
 
-/*
- * Programming Quiz: String Manipulation Quiz 1
- *
- * Using string methods, convert "adamify" to "Namify"
- */
+// /*
+//  * Programming Quiz: String Manipulation Quiz 1
+//  *
+//  * Using string methods, convert "adamify" to "Namify"
+//  */
 
-var text = "adamify";
+// var text = "adamify";
 
-var namifyzer = function(string) {
-  // Right now, the variable string === "adamify"
-  // Manipulate string to make it equal to "Namify"
-  // Your code goes here!
-  string = string.slice(-5);
-  string = "N" + string;
-  return string;
-};
+// var namifyzer = function(string) {
+//   // Right now, the variable string === "adamify"
+//   // Manipulate string to make it equal to "Namify"
+//   // Your code goes here!
+//   string = string.slice(-5);
+//   string = "N" + string;
+//   return string;
+// };
 
-// Did your code work? The line below will tell you!
-console.log(namifyzer(text));
+// // Did your code work? The line below will tell you!
+// console.log(namifyzer(text));
 
-var skills = ["awesomeness", "programming", "teaching", "JS"];
-//$("#main").append(skills);
-//$("#main").append(skills[0]);
 
-var sampleArray = [0, 0, 7];
+// //$("#main").append(skills);
+// //$("#main").append(skills[0]);
+
+// var sampleArray = [0, 0, 7];
 
 // var incrementLastArrayElement = function(_array) {
 //     var newArray = [];
@@ -82,21 +82,21 @@ var sampleArray = [0, 0, 7];
 //     // Don't delete this line!
 //     return newArray;
 // };
-function incrementLastArrayElement(_array) {
-  var newArray = [];
+// function incrementLastArrayElement(_array) {
+//   var newArray = [];
 
-  newArray = _array.slice(0);
-  var lastNumber = newArray.pop();
-  newArray.push(lastNumber + 1);
-  console.log(newArray);
-  return newArray;
-}
+//   newArray = _array.slice(0);
+//   var lastNumber = newArray.pop();
+//   newArray.push(lastNumber + 1);
+//   console.log(newArray);
+//   return newArray;
+// }
 
-// Did your code work? The line below will tell you!
-console.log(incrementLastArrayElement(sampleArray));
+// // Did your code work? The line below will tell you!
+// console.log(incrementLastArrayElement(sampleArray));
 
-// If given a string of a two word name formatted with any mix of capitalization, can you manipulate the string to ensure the first name has a capital first letter and the last name is totally capitalized?
-var name = "AlbERt EINstEiN";
+// // If given a string of a two word name formatted with any mix of capitalization, can you manipulate the string to ensure the first name has a capital first letter and the last name is totally capitalized?
+// var name = "AlbERt EINstEiN";
 
 // function nameChanger(oldName) {
 //   var finalName = oldName;
@@ -111,20 +111,41 @@ var name = "AlbERt EINstEiN";
 //   return finalName;
 // }
 
-function nameChanger(oldName) {
-    var finalName = oldName;
-    var names = finalName.split(" ");
-    names[1] = names[1].toUpperCase();
-    names[0] = names[0].slice(0,1).toUpperCase() + names[0].slice(1).toLowerCase();
-    finalName = names.join(" ");
-    return finalName;
-}
+// function nameChanger(oldName) {
+//     var finalName = oldName;
+//     var names = finalName.split(" ");
+//     names[1] = names[1].toUpperCase();
+//     names[0] = names[0].slice(0,1).toUpperCase() + names[0].slice(1).toLowerCase();
+//     finalName = names.join(" ");
+//     return finalName;
+// }
 
-// Did your code work? The line below will tell you!
-console.log(nameChanger(name));
+// // Did your code work? The line below will tell you!
+// console.log(nameChanger(name));
 
 
 
+
+// $("#main").append(bio.name);
+// $("#main").append(bio.role);
+// $("#main").append(bio.contacts);
+// $("#main").append(bio.city);
+// $("#main").append(bio.biopic);
+// $("#main").append(bio.welcomeMessage);
+// $("#main").append(bio.age);
+// $("#main").append(bio.skills);
+// $("#main").append(bio.favColor);
+
+// $("#main").append(work.jobposition);
+// $("#main").append(work.employer);
+// $("#main").append(work.yearsInCompany);
+// $("#main").append(work.location);
+
+// $("#main").append(education.college);
+// $("#main").append(education.years);
+// $("#main").append(education.schoolLocation);
+
+var skills = ["awesomeness", "programming", "teaching", "JS"];
 var contact = ["+6395201258","cjpesco@gmail.com"];
 var bio = {
     "name":"CJ Pesco",
@@ -155,26 +176,5 @@ work.location = "Maasin City";
 education["college"] = "STI College Ormoc";
 education["years"] = "2015 - 2016";
 education["city"] = "Ormoc City";
-
-$("#main").append(bio.name);
-$("#main").append(bio.role);
-$("#main").append(bio.contacts);
-$("#main").append(bio.city);
-$("#main").append(bio.biopic);
-$("#main").append(bio.welcomeMessage);
-$("#main").append(bio.age);
-$("#main").append(bio.skills);
-$("#main").append(bio.favColor);
-
-$("#main").append(work.jobposition);
-$("#main").append(work.employer);
-$("#main").append(work.yearsInCompany);
-$("#main").append(work.location);
-
-$("#main").append(education.college);
-$("#main").append(education.years);
-$("#main").append(education.schoolLocation);
-
-
 
 
