@@ -160,90 +160,73 @@ var work = {
   employer: "Clarkline Studio",
   title: "Back End Developer",
   dates: "2020 - December 31, 2080",
-  description: "Build apis for websites Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue augue nisi, nec elementum tellus vehicula cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque maximus ex volutpat orci commodo, at egestas risus ultrices. Donec pulvinar tempus ipsum in imperdiet."
+  description:
+    "Build apis for websites Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue augue nisi, nec elementum tellus vehicula cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque maximus ex volutpat orci commodo, at egestas risus ultrices. Donec pulvinar tempus ipsum in imperdiet."
 };
 
 var education = {
-
-    schools: [
-        {
-            name: "STI Maasin",
-            city: "Maasin City",
-            degree: "Diploma",
-            majors: ["DIT"],
-            dates: 2013,
-            url: "http:example.com"
-
-           
-        },
-        {
-            name: "STI College Ormoc",
-            city: "Ormoc City",
-            degree: "Undergraduate",
-            majors: ["BSIT"],
-            dates: 2015,
-            url: "http:example.com"
-        }
-    ],
-    onlineCourses:[
-        {
-            title: "Javascript Crash Course",
-            school: "Udacity",
-            dates: 2014, 
-            url: "http://udacity.com"
-        },
-        {
-            title: "Full Stack Web Developer",
-            school: "Udacity",
-            dates: 2015, 
-            url: "http://udacity.com"
-        }
-    ]
-
+  schools: [
+    {
+      name: "STI Maasin",
+      city: "Maasin City",
+      degree: "Diploma",
+      majors: ["DIT"],
+      dates: 2013,
+      url: "http:example.com"
+    },
+    {
+      name: "STI College Ormoc",
+      city: "Ormoc City",
+      degree: "Undergraduate",
+      majors: ["BSIT"],
+      dates: 2015,
+      url: "http:example.com"
+    }
+  ],
+  onlineCourses: [
+    {
+      title: "Javascript Crash Course",
+      school: "Udacity",
+      dates: 2014,
+      url: "http://udacity.com"
+    },
+    {
+      title: "Full Stack Web Developer",
+      school: "Udacity",
+      dates: 2015,
+      url: "http://udacity.com"
+    }
+  ]
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-var html = '<script src="http://hackyourwebsite.com/eviljavascript.js"></script>';
+var html =
+  '<script src="http://hackyourwebsite.com/eviljavascript.js"></script>';
 
 var charEscape = function(_html) {
-    var newHTML = _html;
+  var newHTML = _html;
 
-    // How will you make sure that newHTML doesn't contain any < or > ?
-    // Your code goes here!
-    newHTML = _html.replace(/</g, "&lt;");
-    newHTML = newHTML.replace(/>/g, "&gt;");
-    // Don't delete this line!
-    return newHTML;
+  // How will you make sure that newHTML doesn't contain any < or > ?
+  // Your code goes here!
+  newHTML = _html.replace(/</g, "&lt;");
+  newHTML = newHTML.replace(/>/g, "&gt;");
+  // Don't delete this line!
+  return newHTML;
 };
 
 // Did your code work? The line below will tell you!
 console.log(charEscape(html));
 
-
-
-
 var weirdObject = {
-    "property": "Time for an astronomy lesson!",
-    "property1": "Cameron's minor in college was astronomy",
-    "property-2": "The 4 Galilean largest moons of Jupiter are:",
-    "property 3": "Io, Ganymede, Callisto, Europa",
-    "property$": "Saturn's moon Enceladus has liquid water ocean under its icy surface",
-    " property": "The Sun contains 99.87% of the mass of the entire solar system",
-    "property()": "There are 5 dwarf planets in our solar system:",
-    "property[]": "Pluto, Ceres, Eris, Haumea, Makemake",
-    "8property": "Mars has two tiny moons: Phobos and Deimos"
+  property: "Time for an astronomy lesson!",
+  property1: "Cameron's minor in college was astronomy",
+  "property-2": "The 4 Galilean largest moons of Jupiter are:",
+  "property 3": "Io, Ganymede, Callisto, Europa",
+  property$:
+    "Saturn's moon Enceladus has liquid water ocean under its icy surface",
+  " property": "The Sun contains 99.87% of the mass of the entire solar system",
+  "property()": "There are 5 dwarf planets in our solar system:",
+  "property[]": "Pluto, Ceres, Eris, Haumea, Makemake",
+  "8property": "Mars has two tiny moons: Phobos and Deimos"
 };
 
 // Use console.log() to figure out if dot and/or bracket notation
@@ -261,12 +244,16 @@ var dotNotation0 = true;
 var bracketNotation0 = true;
 
 // property1
-var dotNotation1 = false;
-var bracketNotation1 = false;
+var dotNotation1 = true;
+var bracketNotation1 = true;
+
 
 // property-2
 var dotNotation2 = false;
-var bracketNotation2 = false;
+
+var bracketNotation2 = true;
+
+
 
 // property 3
 var dotNotation3 = false;
@@ -274,21 +261,35 @@ var bracketNotation3 = false;
 
 // property$
 var dotNotation4 = false;
-var bracketNotation4 = false;
+
+var bracketNotation4 = true;
+
+
 
 // *space*property
-var dotNotation5 = false;
-var bracketNotation5 = false;
+var dotNotation5 = true;
+
+var bracketNotation5 = true;
+
+
 
 // property()
 var dotNotation6 = false;
-var bracketNotation6 = false;
+
+var bracketNotation6 = true;
+
+
 
 // property[]
 var dotNotation7 = false;
-var bracketNotation7 = false;
+
+var bracketNotation7 = true;
+
+
+
 
 // 8property
 var dotNotation8 = false;
-var bracketNotation8 = false;
-
+//console.log(weirdObject.8property);
+var bracketNotation8 = true;
+console.log(weirdObject['8property']);
