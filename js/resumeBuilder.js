@@ -98,17 +98,26 @@ console.log(incrementLastArrayElement(sampleArray));
 // If given a string of a two word name formatted with any mix of capitalization, can you manipulate the string to ensure the first name has a capital first letter and the last name is totally capitalized?
 var name = "AlbERt EINstEiN";
 
+// function nameChanger(oldName) {
+//   var finalName = oldName;
+//   // Your code goes here!
+//   var personName = finalName.split(' ');
+//   var firstName = personName[0];
+//   var lastName = personName[1].toUpperCase();
+//   var fNameCapitalized = firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase();
+
+//   finalName = fNameCapitalized +' '+  lastName ;
+//   // Don't delete this line!
+//   return finalName;
+// }
+
 function nameChanger(oldName) {
-  var finalName = oldName;
-  // Your code goes here!
-  var personName = finalName.split(' ');
-  var firstName = personName[0];
-  var lastName = personName[1].toUpperCase();
-  var fNameCapitalized = firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase();
-  
-  finalName = fNameCapitalized +' '+  lastName ;
-  // Don't delete this line!
-  return finalName;
+    var finalName = oldName;
+    var names = oldName.split(" ");
+    names[1] = names[1].toUpperCase();
+    names[0] = names[0].slice(0,1).toUpperCase() + names[0].slice(1).toLowerCase();
+    finalName = names.join(" ");
+    return finalName;
 }
 
 // Did your code work? The line below will tell you!
