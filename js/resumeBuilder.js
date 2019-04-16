@@ -212,6 +212,28 @@ var education = {
   ]
 };
 
+
+var projects = {
+  projects:[{
+    
+    title: "Yukata Brunos Mar Website",
+    dates: "2020 - December 31, 2040",
+    description:"Build front End Design for websites Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue augue nisi, nec elementum tellus vehicula cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque maximus ex volutpat orci commodo, at egestas risus ultrices. Donec pulvinar tempus ipsum in imperdiet.",
+    images:['./images/projects/image1.jpg','./images/projects/image2.jpg']
+  
+  },
+  {
+   
+    title: "Blue Ecommerce",
+    dates: "2040 - December 31, 2080",
+    description:"Build Back Endof the website cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque maximus ex volutpat orci commodo, at egestas risus ultrices. Donec pulvinar tempus ipsum in imperdiet.",
+    images:['./images/projects/image3.jpg']
+  
+  }
+  ]
+  
+};
+
 var html =
   '<script src="http://hackyourwebsite.com/eviljavascript.js"></script>';
 
@@ -357,3 +379,41 @@ function locationizer(work_obj){
 }
 
 console.log(locationizer(work));
+
+
+function inName(name){
+    name = name.trim().split(" ");
+    console.log(name);
+    names[1] = names[1].toUpperCase();
+    names[0] = names[0].slice(0,1).toUpperCase() + names[0].slice(1).toLowerCase();
+  
+    return names[0] + " " +names[1] ;
+}
+
+$('#main').append(internationalizeButton);
+
+projects.display = function(){
+
+  for(project in projects.projects){
+    $('#projects').append(HTMLprojectStart);
+    
+    var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+    var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+    var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+
+    $(".project-entry:last").append(formattedTitle);
+    $(".project-entry:last").append(formattedDates);
+    $(".project-entry:last").append(formattedDescription);
+    if(projects.projects[project].images.length > 0){
+      for(image in projects.projects[project].images){
+        var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+        $(".project-entry:last").append(formattedImage);
+      }
+    }
+
+  }
+
+}
+
+
+projects.display();
