@@ -309,8 +309,11 @@ if (bio.skills.length > 0) {
   }
 }
 
+
+
+function displayWork(){
 //console.log(work.jobs);
-if (work.jobs.length > 0) {
+
  
   for(job in work.jobs){
     $("#workExperience").append(HTMLworkStart);
@@ -321,9 +324,13 @@ if (work.jobs.length > 0) {
     var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
     var formattedEmployerTitle = formattedEmployer + formattedTitle ;
     $(".work-entry:last").append(formattedEmployerTitle);
+    $(".work-entry:last").append(formattedDates);
+    $(".work-entry:last").append(formattedDescription);
+
 
   }
-}
 
+
+}
 
 
