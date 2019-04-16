@@ -145,15 +145,17 @@ var bio = {
   name: "CJ Pesco",
   role: "Web Developer",
   contacts: {
+    telphone:"570-8246",
     mobile: "+63912581024",
     email: "cjpesco@gmail.com",
     github: "cjpesco",
     twitter: "@cjpesco",
-    location: "Southern Leyte"
+    location: "Southern Leyte",
+    blog:"cjpesco.com"
   },
   biopic: "images/fry.jpg",
   welcomeMessage: "Welcome to my website",
-  skills: ["awesomeness", "programming", "teaching", "JS"]
+  skills: ["awesomeness", "programming", "teaching", "JS","Java", "HTML CSS","Android"," Unity3d"]
 };
 
 var work = {
@@ -318,8 +320,34 @@ console.log(weirdObject["8property"]);
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+
+var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
+var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
+
+$("#header").append(formattedPic);
+$("#header").append(formattedMessage);
+
+var formattedcontactTelephone = HTMLcontactGeneric.replace("%data%", bio.contacts.telphone);
+var formattedcontactMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+var formattedcontactEmail = HTMLemail.replace("%data%", bio.contacts.email);
+var formattedcontactTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+var formattedcontactGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+var formattedcontactBlog = HTMLblog.replace("%data%", bio.contacts.blog);
+var formattedcontactLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+
+$("#topContacts").append(formattedcontactTelephone);
+$("#topContacts").append(formattedcontactMobile );
+$("#topContacts").append(formattedcontactEmail);
+$("#topContacts").append(formattedcontactTwitter);
+$("#topContacts").append(formattedcontactGithub);
+$("#topContacts").append(formattedcontactBlog);
+$("#topContacts").append(formattedcontactLocation);
+
+
+
 
 if (bio.skills.length > 0) {
   $("#header").append(HTMLskillsStart);
