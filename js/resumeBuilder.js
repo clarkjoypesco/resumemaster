@@ -157,11 +157,24 @@ var bio = {
 };
 
 var work = {
-  employer: "Clarkline Studio",
-  title: "Back End Developer",
-  dates: "2020 - December 31, 2080",
-  description:
-    "Build apis for websites Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue augue nisi, nec elementum tellus vehicula cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque maximus ex volutpat orci commodo, at egestas risus ultrices. Donec pulvinar tempus ipsum in imperdiet."
+  jobs:[{
+    employer: "Onix Dev and Designs",
+    title: "Front End Developer",
+    dates: "2020 - December 31, 2040",
+    location:"Cebu City",
+    description:
+      "Build front End Design for websites Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue augue nisi, nec elementum tellus vehicula cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque maximus ex volutpat orci commodo, at egestas risus ultrices. Donec pulvinar tempus ipsum in imperdiet."
+  },
+  {
+    employer: "Clarkline Studio",
+    title: "Back End Developer",
+    dates: "2040 - December 31, 2080",
+    location:"Maasin City",
+    description:
+      "Build Back Endof the website cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque maximus ex volutpat orci commodo, at egestas risus ultrices. Donec pulvinar tempus ipsum in imperdiet."
+  }
+  ]
+  
 };
 
 var education = {
@@ -221,8 +234,7 @@ var weirdObject = {
   property1: "Cameron's minor in college was astronomy",
   "property-2": "The 4 Galilean largest moons of Jupiter are:",
   "property 3": "Io, Ganymede, Callisto, Europa",
-  property$:
-    "Saturn's moon Enceladus has liquid water ocean under its icy surface",
+  property$:"Saturn's moon Enceladus has liquid water ocean under its icy surface",
   " property": "The Sun contains 99.87% of the mass of the entire solar system",
   "property()": "There are 5 dwarf planets in our solar system:",
   "property[]": "Pluto, Ceres, Eris, Haumea, Makemake",
@@ -296,3 +308,22 @@ if (bio.skills.length > 0) {
     index++;
   }
 }
+
+//console.log(work.jobs);
+if (work.jobs.length > 0) {
+ 
+  for(job in work.jobs){
+    $("#workExperience").append(HTMLworkStart);
+    var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+    var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+    var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+    var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+    var formattedEmployerTitle = formattedEmployer + formattedTitle ;
+    $(".work-entry:last").append(formattedEmployerTitle);
+
+  }
+}
+
+
+
